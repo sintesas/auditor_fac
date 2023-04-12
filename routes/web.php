@@ -631,3 +631,9 @@ Route::match(['get', 'post'], '/scheduler_data', "DashboardController@data");
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//cambios JDT
+//Parametrizacion
+//Listas Dinamicas
+Route::get('/listas-dinamicas', 'ListaDinamicaController@index')->name('listas_dinamicas.index');
+Route::get('/listas-dinamicas', ['as' => 'Crear_lista', 'uses' => 'ListaDinamicaController@CrearLista']);

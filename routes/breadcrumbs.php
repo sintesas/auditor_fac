@@ -1055,6 +1055,11 @@ Breadcrumbs::register('informeFuncionarioAuditoriaVisual', function ($breadcrumb
 	$breadcrumbs->push('Informe H/H Auditorias por funcionario', route('informeFuncionariosAuditorias.index'));
 });
 
-
+//JDT
+//Parametrizacion
+Breadcrumbs::register('listas_dinamicas', function ($breadcrumbs) {
+	$breadcrumbs->parent('dashboard');
+	$breadcrumbs->push('Listas Dinamicas', route('listas_dinamicas.index'));
+});
 
 ?>

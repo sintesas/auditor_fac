@@ -39,6 +39,53 @@ $rolFULL = UsersLDAP::perteneceIGEFA_CEOAF();
 				</a>
 			</li><!--end /menu-li -->
 			<!-- END DASHBOARD -->
+
+			{{--BEGIN ADMINISTRACION --}}
+			
+			<li class="gui-folder">
+				<a>
+					<div class="gui-icon"> <i class="fa fa-shield"></i></div>
+					<span class="title">Administración</span>
+				</a>
+				<ul>
+					<li class="gui-folder">
+						<a href="{{route('personal.index')}}"><span class="title">Usuarios</span></a>
+					</li>
+					<li class="gui-folder">
+						<a href="javascript:void(0);"><span class="title">Roles</span></a>
+					</li>
+				</ul>
+			</li>
+
+			{{--END ADMINISTRACION--}}
+
+			{{--BEGIN PARAMETRIZACION --}}
+			
+			<li class="gui-folder">
+				<a>
+					<div class="gui-icon"> <i class="fa fa-clipboard"></i></div>
+					<span class="title">Parametrizacion</span>
+				</a>
+				<ul>
+					{{-- <li class="gui-folder">
+						<a href="{{route('personal.index')}}"><span class="title">Usuarios</span></a>
+					</li> --}}
+					<li class="gui-folder">
+						<a href="javascript:void(0);"><span class="title">Unidades</span></a>
+					</li>
+					<li class="gui-folder">
+						<a href="{{route('listas_dinamicas.index')}}"><span class="title">Listas Dinamicas</span></a>
+						{{-- <ul>
+							<li><a href=""><span class="title">Tipo inpeccion</span></a></li>
+							<li><a href=""><span class="title">criterios</span></a></li>
+							<li><a href=""><span class="title">procesos</span></a></li>
+						</ul> --}}
+					</li>
+				</ul>
+			</li>
+
+			{{--END PARAMETRIZACION--}}
+
 			<!--inicio reparacion -->
 
 				@if ($gl_perfil[12] == true || $gl_perfil[13] == true || $gl_perfil[1] == true || $gl_perfil[8] == true || $gl_perfil[11] == true || $gl_perfil[19] == true)
@@ -225,7 +272,6 @@ $rolFULL = UsersLDAP::perteneceIGEFA_CEOAF();
 
 
 			{{-- END CERTIFICACION DE PRODUCTOS --}}
-
 
 
 			{{-- BEGIN RECONOCIMIENTO Y EVALUACION  --}}
